@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PHP and HTML Integration</title>
+</head>
+<body>
+   <form action="">
+    <label for="name" name = "num1"></label>
+    Enter the 1st Number:<input type="text" id="first" placeholder="Num1"><br><br>
+    Enter the 2st Number:<input type="text" id="second" placeholder="Num2">
+   </form>
+   <div class="answer"></div><br>
+   <button onclick="addition()">Add</button>
+   <button onclick="sub()">Sub</button>
+   
+</body>
+<script>
+   function addition(){
+      const firstval = document.getElementById('first').value;
+      const secondval = document.getElementById('second').value;
+      const sum = parseInt(firstval) + parseInt(secondval);
+      document.querySelector('.answer').innerHTML = `<h1>The add of two numbers is ${sum}</h1>`;
+   }
+   function sub(){
+      const firstval = document.getElementById('first').value;
+      const secondval = document.getElementById('second').value;
+      const sum = parseInt(firstval) - parseInt(secondval);
+      document.querySelector('.answer').innerHTML = `<h1>The subtraction of two numbers is ${sum}</h1>`;
+   }
+</script>
+</html>
